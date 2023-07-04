@@ -1,0 +1,78 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.calculator_board {
+    width: 30%;
+    background-color: #13020c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 12px 1px;
+}
+
+h1 {
+    text-align: center;
+    padding: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+}
+
+.calculator_area {
+    display: flex;
+    justify-content: center;
+}
+
+.calculator_board input[type="button"] {
+    width: 84px;
+    background-color: rgba(255, 255, 255, 0.24);
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin-top: 5px;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.input_section #input_degit {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.input_section > input:focus {
+    outline: none;
+}
+
+.input_section #view_point {
+    height: 30px;
+    text-align: right;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: wheat;
+    width: 100%;
+    display: block;
+    background-color: transparent;
+    border: none;
+}
+
+#backspace_btn {
+    background-color: rgb(122, 6, 6);
+}
+
+.calculator_board input[type="button"]:active {
+    background-color: black;
+}
+
+#backspace_btn:active{
+    background-color: red;
+}
