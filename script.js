@@ -96,7 +96,7 @@ clickArea.addEventListener("click", (e) => {
 
 
 document.addEventListener("keydown", (e) => {
-
+       console.dir(e.target);
        switch(e.key) {
               case "1":
                      inputNumber.value += 1;
@@ -158,6 +158,7 @@ document.addEventListener("keydown", (e) => {
                      calculatingProcess(inputNumber.value, "%");
                      break;
               case "Enter":
+                     e.preventDefault();
                      solutionFunc();
                      break;
 
@@ -251,14 +252,22 @@ function solutionFunc() {
 
        if(histoVal[histoVal.length - 1] === "-") {
               inputNumber.value = calculate - parseFloat(inputNumber.value);
+              calculate = 0;
+              arrayForSimbol = [];
        } else if(histoVal[histoVal.length - 1] === "+") {
               let valuu = calculate + parseFloat(inputNumber.value);
               inputNumber.value = valuu;
+              calculate = 0;
+              arrayForSimbol = [];
               //calculate + parseFloat(inputNumber.value);
        } else if(histoVal[histoVal.length - 1] === "x") {
               inputNumber.value = calculate * parseFloat(inputNumber.value);
+              calculate = 0;
+              arrayForSimbol = [];
        } else if(histoVal[histoVal.length - 1] === "/") {
               inputNumber.value = calculate / parseFloat(inputNumber.value);
+              calculate = 0;
+              arrayForSimbol = [];
        }
 }
 
@@ -278,6 +287,6 @@ function forChecking(anArray, calculateVal, currentVal) {
                      return calculate /= currentVal;
               }
        }else {
-              console.log("any things is else");
+              console.log("any things is else"); 
        }
 }
