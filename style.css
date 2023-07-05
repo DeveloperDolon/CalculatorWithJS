@@ -84,6 +84,7 @@ h1 {
     }
 
     .calculator_board input[type="button"] {
-        width: 23%;
+        width: 20%;
+        padding: 10px 20px;
     }
   }
