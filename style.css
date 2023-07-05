@@ -76,3 +76,13 @@ h1 {
 #backspace_btn:active{
     background-color: red;
 }
+
+@media screen and (max-width: 400px) {
+    .calculator_board {
+        width: 90%;
+    }
+
+    .calculator_board input[type="button"] {
+        width: 68px;
+    }
+  }
